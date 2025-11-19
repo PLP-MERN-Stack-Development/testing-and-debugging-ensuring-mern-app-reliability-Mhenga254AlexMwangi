@@ -1,0 +1,20 @@
+{
+  "name": "mern-testing-app",
+  "version": "1.0.0",
+  "description": "MERN stack application with comprehensive testing",
+  "scripts": {
+    "install-all": "cd client && npm install && cd ../server && npm install",
+    "test": "jest",
+    "test:server": "jest --selectProjects=server",
+    "test:client": "jest --selectProjects=client",
+    "test:unit": "jest --testPathPattern=\"unit\"",
+    "test:integration": "jest --testPathPattern=\"integration\"",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "jest": "^29.7.0"
+  }
+}
